@@ -1,35 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Outfit:wght@100..900&display=swap');
 
-:root{
-  --theme-color:#21063e;
+:root {
+  --theme-color: #1c1c1c;
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: #f8f8f8;
+  --border-color: #e0e0e0;
 }
-*{
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --card-bg: #1e1e1e;
+  --border-color: #333333;
+}
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Outfit',sans-serif;
+  font-family: 'Outfit', sans-serif;
   scroll-behavior: smooth;
 }
-html{
+
+html {
   font-size: 62.5%;
 }
-body{
+
+body {
   min-width: 100vh;
   font-size: 1.6rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
 }
-a{
+
+a {
   text-decoration: none;
   color: inherit;
 }
-.app{
+
+a,
+button {
+  color: var(--text-color);
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+.app {
   width: 80%;
   margin: 0 auto;
 }
-@keyframes fadeIn{
-  0%{
+
+@keyframes fadeIn {
+  0% {
     opacity: 0;
   }
-  100%{
+
+  100% {
     opacity: 1;
   }
 }

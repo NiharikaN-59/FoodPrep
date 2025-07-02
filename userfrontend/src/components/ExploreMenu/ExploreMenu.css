@@ -5,7 +5,7 @@
 }
 
 .explore-menu h1{
-    color: #262626;
+    color: #8d8787;
     font-size: 2.2rem;
     font-weight: 500;
 }
@@ -73,7 +73,7 @@
 
 @media (max-width: 750px) {
     .explore-menu h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .explore-menu-text {
