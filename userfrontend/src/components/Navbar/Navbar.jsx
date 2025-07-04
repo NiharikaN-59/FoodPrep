@@ -7,18 +7,8 @@ import {StoreContext} from '../../context/StoreContext'
 const Navbar = ({showLogin,setShowLogin}) => {
 
     const [menu, setMenu] = useState('home')
-    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
     const {getTotalCartAmount,token,setToken} = useContext(StoreContext);
     const navigate = useNavigate()
-    
-    useEffect(() => {
-        document.documentElement.setAttribute('data-theme', theme)
-        localStorage.setItem('theme', theme)
-    }, [theme])
-
-    const toggleTheme = () => {
-        setTheme((prev) => (prev === 'light' ? 'dark' : 'light'))
-    }
 
     const logout = () => {
         localStorage.removeItem('token')
@@ -35,10 +25,6 @@ const Navbar = ({showLogin,setShowLogin}) => {
             <a href='#footer' className = {menu ==='contact-us' ? 'active' : ''} onClick={()=>setMenu('contact-us')}>Contact us</a>
         </ul>
         <div className="navbar-right">
-        <button onClick={toggleTheme} className="theme-toggle">
-                    {theme === 'light' ? '🌙' : '☀️'}
-                </button>
-
             <div className="navbar-basket-icon">
                 <Link to='/cart'><img src={assets.basket_icon} alt="" /></Link>
                 <div className={getTotalCartAmount()!==0?"dot":""}></div>

@@ -4,12 +4,6 @@
   padding: 2rem;
   text-align: center;
 }
-.app{
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  min-height: 100vh;
-}
-
 
 .logo {
   height: 6em;
